@@ -1,0 +1,24 @@
+{
+  "name": "SocialHub - eBay",
+  "version": "1.1",
+  "description": "Follow any eBay seller by only one click.",
+  "background_page": "background.html",
+  "browser_action": {
+    "default_title": "Go to SocialHub",
+  	"default_icon": "icons/ebay_19.png" },
+  "icons": { 
+  	"16": "icons/ebay_16.png",
+	"48": "icons/ebay_48.png",
+  	"128": "icons/ebay_128.jpg" },
+  "permissions": [
+  	"tabs",
+	"cookies",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [ {
+    "matches": ["http://cgi.ebay.com/*", "https://cgi.ebay.com/*", "http://shop.ebay.com/*", "https://shop.ebay.com/*"], 
+    "js": ["scripts/content.js"],
+    "all_frames": true
+  }]
+}
