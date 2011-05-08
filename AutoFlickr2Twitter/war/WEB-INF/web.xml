@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<!-- Listener -->
+	<listener>
+		<listener-class>com.googlecode.flickr2twitter.core.SystemInitializer</listener-class>
+	</listener>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>recheckServlet</servlet-name>
+		<servlet-class>com.googlecode.flickr2twitter.servlet.ServiceExecutionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>recheckServlet</servlet-name>
+		<url-pattern>/tasks/recheck</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>sinacallback</servlet-name>
+		<servlet-class>com.googlecode.flickr2twitter.sina.weibo4j.http.SinaSignInCallBackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sinacallback</servlet-name>
+		<url-pattern>/sinacallback</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>delete</servlet-name>
+		<servlet-class>com.googlecode.flickr2twitter.servlet.DeleteSourceTargetServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>delete</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>userOperation</servlet-name>
+		<servlet-class>com.googlecode.flickr2twitter.servlet.UserAccountServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userOperation</servlet-name>
+		<url-pattern>/userOperation</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>oauth</servlet-name>
+		<servlet-class>com.googlecode.flickr2twitter.servlet.OAuthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>oauth</servlet-name>
+		<url-pattern>/oauth</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>openIdServlet</servlet-name>
+		<servlet-class>com.googlecode.flickr2twitter.servlet.OpenIdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>openIdServlet</servlet-name>
+		<url-pattern>/openid</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>workerServlet</servlet-name>
+		<servlet-class>com.googlecode.flickr2twitter.servlet.ServiceWorkerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>workerServlet</servlet-name>
+		<url-pattern>/tasks/worker</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>srctgtmgr</servlet-name>
+		<servlet-class>com.googlecode.flickr2twitter.servlet.UserSourceTargetMgrServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>srctgtmgr</servlet-name>
+		<url-pattern>/srctgtmgr</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ebayConfig</servlet-name>
+		<servlet-class>com.googlecode.flickr2twitter.servlet.EbayConfigServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ebayConfig</servlet-name>
+		<url-pattern>/ebayConfig</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ebayConfigkeywords</servlet-name>
+		<servlet-class>com.googlecode.flickr2twitter.servlet.EbayConfigKeywordsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ebayConfigkeywords</servlet-name>
+		<url-pattern>/ebayConfigkeywords</url-pattern>
+	</servlet-mapping>
+
+	<security-constraint>
+		<web-resource-collection>
+			<url-pattern>/tasks/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/500.jsp</location>
+	</error-page>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- Application class name -->
+	<context-param>
+		<param-name>org.restlet.application</param-name>
+		<param-value>com.googlecode.flickr2twitter.services.rest.SocialHubRestletApplication</param-value>
+	</context-param>
+
+	<!-- Restlet adapter -->
+	<servlet>
+		<servlet-name>RestletServlet</servlet-name>
+		<servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+	</servlet>
+
+	<!-- Catch all requests -->
+	<servlet-mapping>
+		<servlet-name>RestletServlet</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>

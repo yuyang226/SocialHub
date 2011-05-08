@@ -1,0 +1,6 @@
+1) Install the latest GAE plug-ins to Eclipse.
+2) Import this project to Eclipse
+3) Goto source folder com.googlecode.flickr2twitter.core, 
+open setup.properties file, find "REDIRECT_URI_HOST=http://ebaysocialhub.appspot.com/", 
+change "http://ebaysocialhub.appspot.com/" to your own web site URL.
+

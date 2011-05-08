@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="flickr2twitter" default="upload" basedir=".">
+	<tstamp>
+		<format property="timestamp" pattern="yyyyMMddHHmmss" locale="en,UK"/>
+	</tstamp>
+
+	<property name="project-name" value="${ant.project.name}" />
+	<property name="folder-to-zip" value="war" />
+	<property name="version" value="1.5.0" />
+	<property name="full_version" value="${version}.${timestamp}" />
+	<property name="archive_name" value="${project-name}_${full_version}" />
+	<property environment="env" />
+	
+	<target name="clean">
+		<delete file="${archive_name}.zip" />
+		<delete file="${archive_name}.war" />
+	</target>
+
+	<target name="zip" depends="clean">
+		<zip destfile="${archive_name}.zip" basedir="${folder-to-zip}" excludes=".svn, **/local_db.bin, **/datastore-indexes-auto.xml" />
+	</target>
+
+	<target name="war">
+		<war destfile="${archive_name}.war" webxml="war/WEB-INF/web.xml">
+			<fileset dir="war" excludes=".svn, **/local_db.bin, **/datastore-indexes-auto.xml"/>
+		</war>
+	</target>
+	
+	<target name="upload" depends="zip">
+		<taskdef classname="net.bluecow.googlecode.ant.GoogleCodeUploadTask" classpath="lib/ant-googlecode-0.0.2.jar" name="gcupload"/>
+		<!-- please set your google code user/password to system property first -->
+		<echo>Sending new build '${archive_name}.zip' to your project site for user ${env.gcode.user}</echo>
+		<gcupload 
+		        username="${env.gcode.user}" 
+		        password="${env.gcode.pwd}" 
+		        projectname="flickr2twitter" 
+		        filename="${archive_name}.zip" 
+		        targetfilename="${archive_name}.zip"
+		        summary="Release ${full_version}"
+		        labels="Featured, Type-Package, OpSys-All" />
+		<antcall target="clean"></antcall>
+	</target>
+	
+</project>

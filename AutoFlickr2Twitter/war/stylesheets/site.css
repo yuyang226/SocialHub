@@ -1,0 +1,41 @@
+/********************** Site ***************************/
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: Georgia, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin: 10px 10px;
+	padding: 0px;
+}
+h1 {
+	color: #000000;
+	font-size: 14px;
+	margin: 20px 0px 20px 0px;
+}
+h2 {
+	color: #000000;
+	font-size: 14px;
+	text-align: center;
+	width: 200px;
+	margin: 10px 0px 15px 0px;
+}
+p {
+	margin: 15px 0px;
+}
+a {
+	font-size: 12px;
+}
+img {
+	border-width: 0px;
+}
+td {
+	padding: 3px;
+}
+input {
+	border: 1px solid;
+	font-size: 12pt;
+}

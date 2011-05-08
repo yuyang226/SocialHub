@@ -1,0 +1,165 @@
+/********************** Header ***************************/
+#header {
+	margin: 0px 0px 0px 0px;
+	background-image: url(../images/socialhub_header.png);
+	width: 717px;
+	height: 288px;
+	position: relative;
+}
+#header_ul, #header_ul li {
+	list-style: none;
+}
+#header_ul {
+	background-color: #85a157;
+	width: 717px;
+	top: 255px;
+	position: absolute;
+	height: 35px;
+}
+#header_ul li {
+	float: left;
+}
+#header_ul a {
+	display: block;
+	padding: 10px;
+	width: 90px;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	background-color: #85a157;
+	color: #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+}
+#header_ul a#last {
+	border-right: 0px;
+}
+#header_ul a:hover {
+	background-color: #FEBE43;
+}
+#logo_w1,#logo_w2 {
+	font-size: 24px;
+	font-style: italic;
+	color: #FFFFFF;
+	position: absolute;
+}
+#logo_w1 {
+	top: 20px;
+	left: 30px;
+}
+#logo_w2 {
+	top: 44px;
+	left: 94px;
+}
+#header_text {
+	top: 90px;
+	left: 43px;
+	width: 230px;
+	position: absolute;
+}
+#header_text p {
+	font-size: 18px;
+	color: #FFFFFF;
+}
+#header_text a {
+	color: #28556b;
+}
+#header_text a:hover {
+	color: #c77e0c;
+}
+
+/********************** Content ***************************/
+#container {
+	margin: 0px auto;
+	text-align: left;
+	width: 717px;
+}
+
+#content {
+	padding: 0px 0px 30px 0px;
+	width: 717px;
+}
+
+/********************** Middle ***************************/
+#middle {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#middle a.source, #middle a.target {
+	margin-right: 20px;
+}
+
+/********************** Left ***************************/
+#left {
+	float: left;
+	width: 428px;
+	padding: 0px 10px 30px 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: inline;
+}
+#left img#or {
+	margin-left: 50px;
+	margin-top: 40px;
+}
+#left .border_table#index_signin {
+	float: left;
+	width: 320px;
+	height: 140px;
+}
+#left a {
+	color: #28556b;
+}
+#left a:hover {
+	color: #c77e0c;
+}
+
+/********************** Right ***************************/
+#right {
+	float: right;
+	width: 210px;
+	height: auto;
+	padding: 0px 40px 20px 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#right .border_table {
+	padding: 0px;
+	height: 140px;
+}
+#right .border_table tr {
+	text-align: center;
+	background-color: white;
+}
+#right .border_table tr.first {
+	background-color: #85a157;
+}
+#right a {
+	color: #c77e0c;
+}
+#right a:hover {
+	color: #85a157;
+}
+
+/********************** Footer ***************************/
+#footerline {
+	clear: both;
+	background-image: url(../images/footer_line.jpg);
+	font-size: 1px;
+	height: 5px;
+	padding-top: 2px;
+	margin-top: 10px;
+}
+#footer {
+	width: 717px;
+	text-align: left;
+	padding: 10px 0px;
+}
+#footer #copyleft {
+	float: left;
+	color: gray;
+	margin-top: 12px;
+}
+#footer #supports {
+	float: right;
+	color: gray;
+}

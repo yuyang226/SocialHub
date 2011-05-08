@@ -1,0 +1,45 @@
+/********************** Miscellaneous ***************************/
+.clear {
+	clear: both;
+}
+.border_table {
+	border: 1px solid;
+	padding: 10px;
+	width: 90%;
+	background-color: #85a157;
+	color: #FFFFFF;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+.border_table td {
+	height: 30px;
+}
+.border_table td.first {
+	width: 40%;
+}
+.border_table td.first_ebay {
+	width: 30%;
+}
+.border_table input {
+	height: 25px;
+}
+.no_border_table {
+	width: 100%;
+}
+.no_border_table td {
+	width: 20%;
+	height: 30px;
+	padding-left: 20px;
+}
+.no_border_table td.first {
+	width: 60%;
+}
+h3.source, h3.target {
+	border: 1px solid #F16736;
+	background-color: #FEBE43;
+	color: white;
+	padding-left: 20px;
+}
+#photos a {
+	margin-right: 14px;
+}

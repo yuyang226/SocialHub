@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout style="@style/TitleBar" android:orientation="horizontal">
+		<TextView style="@style/TitleBarText" android:id="@+id/tv_title"
+			android:text="@string/user_profile_view_name" />
+		<ImageView style="@style/TitleBarSeparator" />
+		<ImageButton style="@style/TitleBarAction" android:id="@+id/btnRefreshUserProfile"
+			android:contentDescription="@string/btn_refresh_user_profile_title"
+			android:src="@drawable/refresh" />
+		<ImageView style="@style/TitleBarSeparator" />
+		<ImageButton style="@style/TitleBarAction" android:id="@+id/btnAddMore"
+			android:contentDescription="@string/btn_add_more" android:src="@drawable/more" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_weight="2" android:layout_height="fill_parent"
+			android:padding="5dip">
+			<ImageView android:id="@+id/userImage"
+				android:layout_alignParentLeft="true"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:src="@drawable/android_avatar" />
+			<TextView android:text="" android:id="@+id/userScreenName"
+				android:layout_below="@id/userImage" android:layout_marginTop="10dip"
+				android:layout_alignLeft="@id/userImage" android:layout_width="fill_parent"
+				android:textColor="#aaaa00" android:layout_height="wrap_content"
+				android:gravity="left" android:textStyle="bold" />
+			<TextView android:text="" android:id="@+id/userEmail"
+				android:layout_below="@id/userScreenName" android:layout_alignLeft="@id/userScreenName"
+				android:layout_marginTop="10dip" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:gravity="left" />
+		</RelativeLayout>
+		<ListView android:id="@+id/sourceServiceList"
+			android:paddingLeft="5dip"
+			android:paddingTop="5dip"
+			android:layout_weight="1" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:drawSelectorOnTop="true" />
+	</LinearLayout>
+	<TextView android:id="@+id/android:empty"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:text="@string/main_no_items" />
+</LinearLayout>

@@ -1,0 +1,336 @@
+body {
+	font-size : 10pt;
+	font-family : arial, verdana, helvetica, sans-serif;
+	margin : 0;
+	padding : 0;
+}
+input {
+	vertical-align : middle;
+	border : 1px solid #ccc;
+	color: #000;
+	background-color : #fff;
+	padding : 0.3ex;
+	margin : 0.5ex;
+}
+textarea {
+	border : 1px solid #ddd;
+	color: #000;
+	background-color : #fcfcfc;
+	margin : 1ex;
+	padding : 1ex;
+}
+form {
+	margin : 1pt;
+	padding : 0;
+}
+form p {
+	margin:0;
+	padding:0;
+}
+h1, h2, h3, h4, h5 {
+	font-family : Trebuchet, "Trebuchet ms", tahoma, Sans-Serif;
+	background-color: #fff;
+	color : #f90 ;
+}
+h1 {
+	font-size : 175%;
+}
+h2 {
+	font-size : 140%;
+}
+h3 {
+	font-size : 120%;
+}
+h4 {
+	font-size : 100%;
+}
+h5 {
+	font-size : 100%;
+	font-weight : normal;
+	font-style : italic;
+}
+hr {
+	height : 1px;
+	border-width : 1px 0 0;
+	border-style : solid;
+	border-color : #ccc;
+}
+
+a:link, a:visited, a:hover, a:active  {
+	background-color: #fff;
+	color:#06c;
+	text-decoration : underline;
+}
+.difer a:link, .difer a:visited, .difer a:hover, .difer a:active {
+	background-color: #eee;
+	color:#06c;
+	text-decoration : underline;
+}
+.searchbutton {
+	padding : 0;
+	margin : 0;
+	color : #fff;
+	background-color : #06c;
+	border-top : 1.8px solid #38f;
+	border-right : 1.8px solid #04a;
+	border-bottom : 1.8px solid #04a;
+	border-left : 1.8px solid #38f;
+}
+.actions :link, .actions :visited, .actions :hover, .actions :active {
+	text-decoration : none;
+}
+.left {
+	width : 31%;
+	padding-left : 0.5ex;
+	text-align : left;
+	float : left;
+}
+.center {
+	width : 32%;
+	padding-left : 0.5ex;
+	text-align : center;
+	float : left;
+}
+.right {
+	width : 34%;
+	padding-right : 0.5ex;
+	text-align : right;
+	float : right;
+}
+.topbar {
+	width : 100%;
+	border-bottom : 1px solid #ccc;
+	height : 2.6ex;
+	padding-top : 0.3ex;
+	margin : 0;
+	background-color : #eee;
+	color : #888;
+	clear : both;
+}
+.login {
+	color : #888;
+	background-color:#eee;
+	width : 45%;
+	float : left;
+	padding-left : 0.5ex;
+}
+.misc {
+	width : 45%;
+	float : right;
+	padding-right : 0.5ex;
+	text-align : right;
+	color : #888;
+	background-color : #eee;
+}
+.head {
+	width : 100%;
+	height : 100%;
+	color : #000;
+	background-color : #fff;
+	clear : both;
+}
+.title {
+	width : 45%;
+	padding : 0;
+	margin : 0;
+	float : left;
+}
+.title h1 {
+	font-size : 190%;
+	letter-spacing : 5px;
+	margin : 0;
+	padding : 0 0 0 0.5ex;
+}
+.search {
+	width : 45%;
+	height : 100%;
+	margin : 0;
+	padding : 0 0.5ex 0 0;
+	text-align : right;
+	float : right;
+}
+.infobar {
+	width : 100%;
+	height : 18px;
+	border-top : 1px solid #ccc;
+	clear : both;
+}
+.time {
+	width : 26%;
+	background-color : #fff;
+	color : #888;
+	padding-left : 0.5ex;
+	float : left;
+}
+.breadcrumbs {
+	width : 35%;
+	background-color : #fff;
+	color : #f90;
+	float : left;
+	text-align : center;
+}
+.breadcrumbs :link, .breadcrumbs :visited, .breadcrumbs :hover, .breadcrumbs :active {
+	text-decoration : none;
+}
+.actions {
+	background-color : #fff;
+	color : #888;
+}
+.container {
+	width : 768px;
+	margin : 0 auto;
+	padding : 0;
+}
+.content {
+	width : 100%;
+	clear : both;
+	margin : 0;
+	padding : 0;
+}
+.line {
+	display:inline;
+	margin : 0;
+	padding : 0;
+}
+.sidebar {
+	width : 12%;
+	height : 100%;
+	padding : 0 0 0 5px;
+	margin : 8px 0 0;
+	float : left;
+}
+.sidebar a:link, .sidebar a:visited, .sidebar a:hover, .sidebar a:active {
+	text-decoration : none;
+}
+.sidebar a:hover {
+	text-decoration : underline;
+}
+.sidebar ul {
+	list-style : none;
+	padding : 0 5px 5px 0;
+	margin : 0;
+}
+.sidebar li {
+	margin-bottom : 5px;
+}
+.sidehead {
+	font-size : 14px;
+	margin-bottom : 5px;
+}
+.sidehead a:link, .sidehead a:visited, .sidehead a:hover, .sidehead a:active {
+	background-color : #fff;
+	color : #888;
+}
+.text {
+	width : 82%;
+	float : right;
+	margin : 8px 5px 0 0;
+	padding : 0;
+	line-height : 1.3em;
+}
+.text h1 {
+	margin-top : 0;
+}
+.foot {
+	display : block;
+	width : 100%;
+	clear : both;
+}
+.footini {
+	background-color : #fff;
+	color : #888;
+	width : 100%;
+	margin-top : 0.5ex;
+	height : 2.5ex;
+	clear : both;
+}
+.footmid {
+	background-color : #eee;
+	display : block;
+	color : #888;
+	width : 100%;
+	padding : 0.2ex 0;
+	margin : 0;
+	height : 2.5ex;
+	clear : both;
+}
+.validate {
+	width : 28%;
+	padding-left : 0.5ex;
+	text-align : left;
+	float : left;
+}
+.lastmodified {
+	width : 40%;
+	text-align : center;
+	float : left;
+}
+.feeds {
+	width : 28%;
+	padding-right : 0.5ex;
+	text-align : right;
+	float : right;
+}
+.footend {
+	display : block;
+	background-color : #fff;
+	color : #ccc;
+	width : 100%;
+	margin-top : 0.5ex;
+	height : 2.5ex;
+	clear : both;
+}
+.license {
+	width : 32%;
+	text-align : center;
+	float : right;
+}
+.poweredby {
+	width : 32%;
+	text-align : center;
+	float : left;
+}
+.skinby {
+	width : 32%;
+	text-align : center;
+	float : left;
+}
+.diffbox {
+	width : 100%;
+}
+table.markup {
+	border : 2px dotted #888;
+	width : 90%;
+	height : 2.5ex;
+}
+td.markup1 {
+	border-bottom : 1px solid #888;
+}
+table.horiz td.markup1 {
+	width : 23em;
+	border-right : 1px solid #ccc;
+}
+#wikiedit textarea {
+	width : 98%;
+	margin : 0;
+	padding : 0;
+}
+.wikimessage {
+	margin-top : 4px;
+	margin-bottom : 4px;
+	font-style : italic;
+}
+a.createlinktext {
+	text-decoration : underline;
+	border-bottom : none;
+}
+a.createlink {
+	border-bottom : none;
+}
+a:link.createlink, a:visited.createlink, a:hover.createlink, a:active.createlink {
+	font-weight : normal;
+	font-size : 80%;
+	border-bottom : none;
+	text-decoration : none;
+}
+
